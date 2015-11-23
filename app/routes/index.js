@@ -1,7 +1,8 @@
 module.exports = function routes(server) {
 
   var indexController = require('../controllers/indexController');
-  server.get('/', indexController.list);
-  server.get('/:id', indexController.getId)
-
+  var smsController = require('../controllers/smsController');
+  server.get('/', smsController.list);
+  server.get('sms/:id', smsController.getId)
+  server.post('/sms/:sms', indexController.send);
 }
