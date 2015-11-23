@@ -2,8 +2,6 @@
     "use strict";
 
     var myDb = require('../managers/testDbManager');
-    var http = require('http');
-    var twilio = require('twilio');
 
     module.exports = {
 
@@ -11,6 +9,6 @@
         res.send(myDb.getAll());
         return next();
       }
-
+      
     }
 }())
